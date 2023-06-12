@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 	    --color-warning: #ffcd07;
 	    --color-sucess: #168821;
 	    --color-information: #155bcb;
+		--color-grey-4: #BDBDBD;
 
         --Font-primary:'Inter', sans-serif;
         font-size: 62.5%;

@@ -2,6 +2,7 @@ import { SnacksCards } from "../SnacksCard";
 import { useEffect } from "react"
 import { api } from "../../services/api"
 import { useState } from "react"
+import { UlStyle } from "./style";
 
 
 
@@ -21,9 +22,9 @@ export function SnacksSection(){
 
     return(
         <section>
-            <ul>
+            <UlStyle>
                 {products.map((product) => <SnacksCards key={product.id} product={product}/>)}
-            </ul>
+            </UlStyle>
         </section>
     )
 }

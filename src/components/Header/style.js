@@ -8,6 +8,7 @@ export const HeaderStyle = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 `
 
 export const LogoStyle = styled.figure`
@@ -18,6 +19,7 @@ export const DivHeaderStyle = styled.div`
     margin-right: 10%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 `
 
 export const SpanHeaderStyle = styled.span`

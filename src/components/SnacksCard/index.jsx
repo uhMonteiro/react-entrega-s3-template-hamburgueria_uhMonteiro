@@ -1,18 +1,19 @@
+import { ButtonStyle, DivStyle, FigureStyle, H2Style, LiStyle, PCategoryStyle, PPriceStyle } from "./style";
 
 
 export function SnacksCards({ product }){
     
     return(
-        <li>
-            <div>
+        <LiStyle>
+            <FigureStyle>
                 <img src={product.img} alt={product.name} />
-            </div>
-            <div>
-                <h2>{product.name}</h2>
-                <p>{product.category}</p>
-                <p>{product.price}</p>
-                <button>Adicionar</button>
-            </div>
-        </li>
+            </FigureStyle>
+            <DivStyle>
+                <H2Style>{product.name}</H2Style>
+                <PCategoryStyle>{product.category}</PCategoryStyle>
+                <PPriceStyle>R$ {product.price}</PPriceStyle>
+                <ButtonStyle>Adicionar</ButtonStyle>
+            </DivStyle>
+        </LiStyle>
     )
 }
