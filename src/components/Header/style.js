@@ -18,7 +18,6 @@ export const DivHeaderStyle = styled.div`
     margin-right: 10%;
     display: flex;
     align-items: center;
-    gap: 15px;
 `
 
 export const SpanHeaderStyle = styled.span`
@@ -26,6 +25,7 @@ export const SpanHeaderStyle = styled.span`
     flex-direction: column;
     align-items: flex-start;
     width: 35px;
+    margin-right: 15px;
 `
 
 export const PHeaderStyle = styled.p`
@@ -55,9 +55,10 @@ export const InputHeaderStyle = styled.input`
     
     width: 365px;
     height: 60px;
-    background-color: white;
-    border: 2px solid var(--color-grey-100);
-    border-radius: 8px;
+    border-width: 2px 0px 2px 2px;
+    border-style: solid;
+    border-color: var(--color-grey-100);
+    border-radius: 8px 0px 0px 8px;
 
     font-style: normal;
     font-weight: 400;
@@ -67,4 +68,19 @@ export const InputHeaderStyle = styled.input`
     ::placeholder{
         color: var(--color-grey-100);
     }
+
+    :focus{
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+`
+
+export const ButtonHeaderStyle = styled.button`
+    height: 64px;
+    border-width: 2px 2px 2px 0px;
+    border-style: solid;
+    border-color: var(--color-grey-100);
+    border-radius: 0px 8px 8px 0px;
+    background-color: white;
+    margin-left: -4px;
 `

@@ -1,6 +1,7 @@
 import logo from "../../assets/logo.svg"
 import cart from "../../assets/cart.svg"
-import { DivHeaderStyle, HeaderStyle, InputHeaderStyle, LogoStyle, PHeaderStyle, SpanHeaderStyle } from "./style"
+import search from "../../assets/search.svg"
+import { ButtonHeaderStyle, DivHeaderStyle, HeaderStyle, InputHeaderStyle, LogoStyle, PHeaderStyle, SpanHeaderStyle } from "./style"
 
 export function Header(){
     return(
@@ -14,6 +15,7 @@ export function Header(){
                     <img src={cart} alt="" />
                 </SpanHeaderStyle>
                 <InputHeaderStyle type="text" placeholder="Digitar Pesquisa" />
+                <ButtonHeaderStyle><img src={search} alt="" /></ButtonHeaderStyle>
             </DivHeaderStyle>
         </HeaderStyle>
     )
