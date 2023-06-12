@@ -6,19 +6,22 @@ import { UlStyle } from "./style";
 
 
 
-export function SnacksSection(){
+export function SnacksSection({search}){
     const [products , setProducts] = useState([])
     
     useEffect(() => {
         async function getProducts(){
-            const response = await api.get('/products')
+            const response = await api.get('/products', {
+                params: {
+                    name_like: search
+                }
+            })
 
             setProducts(response.data)
-            console.log(response)
         }
         getProducts()
         
-    } , [])
+    } , [search])
 
     return(
         <section>

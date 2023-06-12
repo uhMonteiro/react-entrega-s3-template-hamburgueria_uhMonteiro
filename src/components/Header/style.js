@@ -15,7 +15,7 @@ export const LogoStyle = styled.figure`
     margin-left: 10%;
 `
 
-export const DivHeaderStyle = styled.div`
+export const DivHeaderStyle = styled.form`
     margin-right: 10%;
     display: flex;
     align-items: center;
