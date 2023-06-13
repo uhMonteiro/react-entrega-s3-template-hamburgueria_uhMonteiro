@@ -2,6 +2,8 @@ import logo from "../../assets/logo.svg"
 import cart from "../../assets/cart.svg"
 import search from "../../assets/search.svg"
 import { ButtonHeaderStyle, DivHeaderStyle, HeaderStyle, InputHeaderStyle, LogoStyle, PHeaderStyle, SpanHeaderStyle } from "./style"
+import { useState } from "react"
+import { Modal } from "../Modal/Modal"
 
 export function Header({inputSearch , setInputSerach , callback}){
     
@@ -11,6 +13,8 @@ export function Header({inputSearch , setInputSerach , callback}){
         callback(inputSearch)
 
     }
+
+    const [modal , setModal] = useState(false)
     
     return(
         <HeaderStyle>
@@ -18,7 +22,7 @@ export function Header({inputSearch , setInputSerach , callback}){
               <img src={logo} alt="Imagem da logo"/>
             </LogoStyle>
             <DivHeaderStyle onSubmit={handleSubmit}>
-                <SpanHeaderStyle>
+                <SpanHeaderStyle onClick={() => setModal(!modal)}>
                     <PHeaderStyle>0</PHeaderStyle>
                     <img src={cart} alt="" />
                 </SpanHeaderStyle>
@@ -28,6 +32,7 @@ export function Header({inputSearch , setInputSerach , callback}){
                   onChange={(event) => setInputSerach(event.target.value)} />
                 <ButtonHeaderStyle type="submit"><img src={search} alt="" /></ButtonHeaderStyle>
             </DivHeaderStyle>
+            {modal && <Modal/>}
         </HeaderStyle>
     )
 }

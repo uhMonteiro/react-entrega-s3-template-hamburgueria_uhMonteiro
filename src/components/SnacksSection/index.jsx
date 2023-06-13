@@ -1,8 +1,8 @@
-import { SnacksCards } from "../SnacksCard";
+import { SnacksCards } from "../SnacksCard"
 import { useEffect } from "react"
 import { api } from "../../services/api"
 import { useState } from "react"
-import { UlStyle } from "./style";
+import { UlStyle } from "./style"
 
 
 
@@ -11,7 +11,7 @@ export function SnacksSection({search}){
     
     useEffect(() => {
         async function getProducts(){
-            const response = await api.get('/products', {
+            const response = await api.get("/products", {
                 params: {
                     name_like: search
                 }

@@ -1,4 +1,4 @@
-import { ButtonStyle, DivStyle, FigureStyle, H2Style, LiStyle, PCategoryStyle, PPriceStyle } from "./style";
+import { ButtonStyle, DivStyle, FigureStyle, H2Style, LiStyle, PCategoryStyle, PPriceStyle } from "./style"
 
 
 export function SnacksCards({ product }){
