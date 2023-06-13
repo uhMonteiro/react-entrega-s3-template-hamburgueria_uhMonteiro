@@ -5,7 +5,7 @@ import { ButtonHeaderStyle, DivHeaderStyle, HeaderStyle, InputHeaderStyle, LogoS
 import { useState } from "react"
 import { Modal } from "../Modal/Modal"
 
-export function Header({inputSearch , setInputSerach , callback}){
+export function Header({inputSearch , setInputSerach , callback , cartProduct}){
     
 
     const handleSubmit = (event) => {
@@ -32,7 +32,7 @@ export function Header({inputSearch , setInputSerach , callback}){
                   onChange={(event) => setInputSerach(event.target.value)} />
                 <ButtonHeaderStyle type="submit"><img src={search} alt="" /></ButtonHeaderStyle>
             </DivHeaderStyle>
-            {modal && <Modal/>}
+            {modal && <Modal setModal={setModal} cartProduct={cartProduct}/>}
         </HeaderStyle>
     )
 }

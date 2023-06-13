@@ -6,7 +6,7 @@ import { UlStyle } from "./style"
 
 
 
-export function SnacksSection({search}){
+export function SnacksSection({search , setCartProduct}){
     const [products , setProducts] = useState([])
     
     useEffect(() => {
@@ -26,7 +26,11 @@ export function SnacksSection({search}){
     return(
         <section>
             <UlStyle>
-                {products.map((product) => <SnacksCards key={product.id} product={product}/>)}
+                {products.map((product) => 
+                <SnacksCards 
+                key={product.id} 
+                product={product}
+                setCartProduct={setCartProduct}/>)}
             </UlStyle>
         </section>
     )

@@ -7,6 +7,7 @@ import { useState } from "react"
 function App() {
   const [search , setSearch] = useState('')
   const [inputSearch , setInputSerach] = useState('')
+  const [cartProduct , setCartProduct] = useState([])
 
   return (
     <>
@@ -14,9 +15,10 @@ function App() {
     <GlobalReset/>
     <Header callback={(inputSearch) => setSearch(inputSearch)} 
     inputSearch={inputSearch} 
-    setInputSerach={setInputSerach}/>
+    setInputSerach={setInputSerach}
+    cartProduct={cartProduct}/>
     <main>
-      <SnacksSection search={search}/>
+      <SnacksSection search={search} setCartProduct={setCartProduct}/>
     </main>
     </>
   )
